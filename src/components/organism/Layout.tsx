@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 import { Box } from '@mui/material';
 
-import Footer from 'components/_shared/Footer';
+import Footer from 'components/organism/Footer';
 
 type Props = {
   title: string;
