@@ -1,31 +1,32 @@
 import React from 'react';
 
-import { Box, Button, Paper, Typography } from '@mui/material';
+import { Paper, Typography } from '@mui/material';
+
 import SignUpButton from './SignUpButton';
+import UseCaseFigure from './UseCaseFigure';
 
 export const InitialDisplay: React.FC = () => {
   return (
     <Paper
       elevation={20}
-      sx={{p: 2, display: 'grid', gap: 1}}
+      sx={{p: 2, pb: 3.5, display: 'grid', gap: 1}}
     >
       <Typography
         variant='h5'
-        sx={{mt: 1, mb: 2}}
+        paragraph
+        sx={{mt: 1, fontWeight: 'bold'}}
       >
         ボタンの掛け違いを清算しよう
       </Typography>
-      <Typography>
-        わだかまりは解き、誤解は払い、
+      <Typography sx={{fontWeight: 'bold'}}>
+        解ける風評は誠実に受け止めて解き、
       </Typography>
       <Typography
-        sx={{mb: 2}}
+        sx={{mb: 2, fontWeight: 'bold'}}
       >
         フレネミーの印象誘導に対策する。
       </Typography>
       <SignUpButton />
-
-
     </Paper>
   );
 };

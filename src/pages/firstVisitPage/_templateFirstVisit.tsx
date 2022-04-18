@@ -7,6 +7,7 @@ import InitialDisplay from './InitialDisplay';
 import Footer from 'components/organism/Footer';
 import ColorCode from 'global/types/ColorCode';
 import UpperLight from './UpperLight';
+import TopInfographic from 'components/atoms/TopInfographic';
 
 /**
  * 初回訪問時の表示ページ。
@@ -29,22 +30,31 @@ export const FirstVisitPage: React.FC = () => {
           display: 'grid',
           justifyContent: 'center',
           justifyItems: 'center',
-          backgroundColor: ColorCode.DEEP_DARK_BLUE,
+          backgroundColor: ColorCode.GREEN,
           py: 4,
           width:  '100%',
         }}
       >
-        <ThemeLogoVariable width='clamp(250px, 50vw, 400px)' />
+        <ThemeLogoVariable width='clamp(310px, 50vw, 370px)' />
         <Box
           component='section'
-          sx={{m :3}}
+          sx={{m :2}}
         >
           <InitialDisplay />
         </Box>
       </Paper>
-
+      <Paper
+        component='aside'
+        elevation={10}
+        sx={{
+          m: 1,
+          width:  '100%',
+        }}
+      >
+        <TopInfographic width='100%'/>
+      </Paper>
       <Footer />
-      </Box>
+    </Box>
   );
 };
 

@@ -12,12 +12,12 @@ export const UpperLight: React.FC = () => {
       sx={{
         my: 1,
         padding: 1,
-        backgroundColor: ColorCode.DEEP_DARK_BLUE,
+        backgroundColor: ColorCode.GREEN,
         width: '100%',
       }}
     >
       <Typography
-      color={ColorCode.OFF_WHITE}
+      color='white'
       sx={{
         fontWeight: 'bold',
         fontSize: 'clamp(15px, 4vw, 20px)',
