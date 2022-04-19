@@ -5,9 +5,9 @@ import { Box, Paper } from '@mui/material';
 import ThemeLogoVariable from 'components/atoms/ThemeLogoVariable';
 import InitialDisplay from './InitialDisplay';
 import Footer from 'components/organism/Footer';
-import ColorCode from 'global/types/ColorCode';
 import UpperLight from './UpperLight';
 import TopInfographic from 'components/atoms/TopInfographic';
+import PaperGreen from 'components/frames/PaperGreen';
 
 /**
  * 初回訪問時の表示ページ。
@@ -15,7 +15,7 @@ import TopInfographic from 'components/atoms/TopInfographic';
 export const FirstVisitPage: React.FC = () => {
   return (
     <Box
-      component='main'
+      component="main"
       sx={{
         display: 'grid',
         justifyContent: 'center',
@@ -23,35 +23,28 @@ export const FirstVisitPage: React.FC = () => {
       }}
     >
       <UpperLight />
-      <Paper
-        component='article'
-        elevation={10}
-        sx={{
-          display: 'grid',
-          justifyContent: 'center',
-          justifyItems: 'center',
-          backgroundColor: ColorCode.GREEN,
-          py: 4,
-          width:  '100%',
-        }}
-      >
-        <ThemeLogoVariable width='clamp(310px, 50vw, 370px)' />
+      <PaperGreen>
         <Box
-          component='section'
-          sx={{m :2}}
-        >
+          component="section"
+          sx={{
+            padding: 2,
+            mb: 1,
+            display: 'grid',
+            gap: 2.5,
+          }}>
+          <ThemeLogoVariable width="clamp(310px, 50vw, 370px)" />
           <InitialDisplay />
         </Box>
-      </Paper>
+      </PaperGreen>
       <Paper
-        component='aside'
+        component="aside"
         elevation={10}
         sx={{
-          m: 1,
-          width:  '100%',
+          m: 0.5,
+          width: '100%',
         }}
       >
-        <TopInfographic width='100%'/>
+        <TopInfographic width="100%" />
       </Paper>
       <Footer />
     </Box>

@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
 
   return (
     <Box
-      component='footer'
+      component="footer"
       sx={{
         display: 'flex',
         justifyContent: 'center',

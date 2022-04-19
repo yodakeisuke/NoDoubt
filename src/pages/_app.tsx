@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <CssBaseline />
       <Component {...pageProps} />
     </ThemeProvider>
-  )
+  );
 }
 
 export default MyApp;

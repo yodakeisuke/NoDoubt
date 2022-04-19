@@ -15,12 +15,9 @@ interface Props {
  * 指定したwidthに合わせたアスペクト比でロゴを返す。
  * @param  width cssのwidth
  */
-export const ThemeLogoVariable: React.FC<Props> = ({width = '100%'}) => {
+export const ThemeLogoVariable: React.FC<Props> = ({ width = '100%' }) => {
   return (
-    <Box
-      component='picture'
-      sx={{width: width}}
-    >
+    <Box component="picture" sx={{ width: width }}>
       <Link href="/" passHref>
         <Image src={MainLogo} layout="responsive" alt="mainlogo" />
       </Link>

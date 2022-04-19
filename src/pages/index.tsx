@@ -12,7 +12,7 @@ const Home: NextPage = () => {
     <Box>
       <Head>
         <title>ButtonUp!</title>
-        <meta name='Button up' content="Personal reputation management app" />
+        <meta name="Button up" content="Personal reputation management app" />
       </Head>
       <FirstVisitPage />
     </Box>

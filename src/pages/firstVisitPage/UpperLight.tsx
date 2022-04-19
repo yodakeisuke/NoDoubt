@@ -1,32 +1,23 @@
 import React from 'react';
 
-import { Paper, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
-import ColorCode from 'global/types/ColorCode';
+import PaperGreen from 'components/frames/PaperGreen';
 
 export const UpperLight: React.FC = () => {
   return (
-    <Paper
-      component='h1'
-      elevation={10}
-      sx={{
-        my: 1,
-        padding: 1,
-        backgroundColor: ColorCode.GREEN,
-        width: '100%',
-      }}
-    >
+    <PaperGreen>
       <Typography
-      color='white'
-      sx={{
-        fontWeight: 'bold',
-        fontSize: 'clamp(15px, 4vw, 20px)',
-        pl: 0.3,
-      }}
+        color="white"
+        sx={{
+          fontWeight: 'bold',
+          fontSize: 'clamp(16px, 5vw, 20px)',
+          pl: 1,
+        }}
       >
         個人のレピュテーションマネジメント
       </Typography>
-    </Paper>
+    </PaperGreen>
   );
 };
 
