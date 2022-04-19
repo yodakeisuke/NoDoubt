@@ -31,7 +31,8 @@ export const FirstVisitPage: React.FC = () => {
             mb: 1,
             display: 'grid',
             gap: 2.5,
-          }}>
+          }}
+        >
           <ThemeLogoVariable width="clamp(310px, 50vw, 370px)" />
           <InitialDisplay />
         </Box>
