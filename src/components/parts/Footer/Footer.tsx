@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
       }}
     >
       <pre>
-        <Typography fontFamily="serif">Made By :</Typography>
+        <Typography fontFamily="serif">Made By : </Typography>
       </pre>
       <Link href={MyGitHub}>
         <a target="_blank">Keisuke Yoda</a>

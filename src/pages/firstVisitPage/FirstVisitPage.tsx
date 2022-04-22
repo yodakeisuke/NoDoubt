@@ -2,27 +2,19 @@ import React from 'react';
 
 import { Box, Paper } from '@mui/material';
 
-import ThemeLogoVariable from 'components/atoms/ThemeLogoVariable';
-import InitialDisplay from './InitialDisplay';
-import Footer from 'components/organism/Footer';
-import UpperLight from './UpperLight';
-import TopInfographic from 'components/atoms/TopInfographic';
-import PaperGreen from 'components/frames/PaperGreen';
+import Layout from 'components/frames/Layout/Layout';
+import ThemeLogoVariable from 'components/parts/ThemeLogoVariable/ThemeLogoVariable';
+import InitialDisplay from '../firstVisitPage/InitialDisplay/InitialDisplay';
+import UpperLight from '../firstVisitPage/UpperLight/UpperLight';
+import TopInfographic from 'components/parts/TopInfographic/TopInfographic';
+import PaperGreen from 'components/frames/PaperGreen/PaperGreen';
 
 /**
  * 初回訪問時の表示ページ。
  */
 export const FirstVisitPage: React.FC = () => {
   return (
-    <Box
-      component="main"
-      sx={{
-        display: 'grid',
-        justifyContent: 'center',
-        justifyItems: 'center',
-      }}
-    >
-      <UpperLight />
+    <Layout title='Home - ButtonUp!' header={<UpperLight />} >
       <PaperGreen>
         <Box
           component="section"
@@ -30,6 +22,7 @@ export const FirstVisitPage: React.FC = () => {
             padding: 2,
             mb: 1,
             display: 'grid',
+            justifyContent :'center',
             gap: 2.5,
           }}
         >
@@ -47,8 +40,7 @@ export const FirstVisitPage: React.FC = () => {
       >
         <TopInfographic width="100%" />
       </Paper>
-      <Footer />
-    </Box>
+    </Layout>
   );
 };
 

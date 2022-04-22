@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Paper, Typography } from '@mui/material';
 
-import SignUpButton from './SignUpButton';
+import SignUpButton from '../SignUpButton/SignUpButton';
 
 export const InitialDisplay: React.FC = () => {
   return (
