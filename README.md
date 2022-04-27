@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## アプリの稼働ページ
 
-## Getting Started
+準備中
+<br>
 
-First, run the development server:
+## 機能概要
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. 風評クチコミ募集機能<br>
++ ユーザ登録後発行されるURLをSNSなどで共有することにより、自分の風評を募集します。
++ 投稿があった場合、回答することができます。
++ 投稿がなくとも、募集を投稿すること自体を悪評を流されることへの自然な牽制とできます。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  
+<br>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## サービスの狙い
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<br>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
++ 対象課題<br>
 
-## Learn More
+周囲を出しぬき、払うコスト以上のリソースをいかに刈り取るかのゲームにおいて、「しらばっくれが効く（評判制裁を回避できる）ライン内での足の引っ張り・囲い込み」はとてもよく見られる手法である。<br>
+ex) 真っ赤な嘘にならない微妙な線で、ニュアンスなどを切り取って印象誘導出来るような風評を流す。
+人間誰しも、という行動ではあるが、これが度を超えて通ってしまうと真に生産的である・誠実であることをエンパワメント出来ず、やられた側は泣き寝入りである。<br>
+ここで、この手法は言い逃れが効き、明るみに出すことが非常に難しいことが特徴であり、現在有効な対処手段が実質的には存在しないことを課題と捉える。<br>
+言い換えると、いわゆる「フレネミー」の「カバードアグレッション・関係性攻撃」を牽制・対処するための、可能な限り現実に使いやすいツールを提供したい。
+<br>
++ ソリューション<br>
 
-To learn more about Next.js, take a look at the following resources:
+SNS上で使用される「質問箱」サービス　× デマや風評に企業が対処するレピュテーションマネジメント<br>
+から着想を得、SNSの投稿などにより、白黒フレー問わず自分の風評・口コミを募集できるサービスを提案する<br>
+ユーザは、妥当な風評は誠意を持って改善することをコミット/真っ赤な嘘は暴く/グレーゾーンの印象操作には訂正を行うことが可能。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## サービスの課題
 
-## Deploy on Vercel
+<br>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
++ 風評を募集することへの「自然さ」「ネガティブ感の無さ」の設計
++ 募集に対し、「あえて教えてあげる」ことへのインセンティブ設計
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
