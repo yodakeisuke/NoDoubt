@@ -8,28 +8,27 @@ import Footer from 'components/parts/Footer/Footer';
 
 type Props = {
   title: string;
-  header: ReactNode;
+  header?: ReactNode | undefined;
   children: ReactNode;
 };
 
 const Layout: React.FC<Props> = ({ title, header, children }) => {
   return (
-    <Box>
+    <Box className="layout">
       <Head>
         <title>{title}</title>
         <meta name="Button up" content="Personal reputation management app" />
       </Head>
       <Box
+        className="wholeContainer"
         sx={{
-          width: { xs: '100%', md: '60vw' },
+          maxWidth: { xs: '100%', md: '45vw' },
           mx: 'auto',
         }}
       >
-        <header>
-          {header}
-        </header>
+        <header>{header}</header>
         <Box
-          component='main'
+          component="main"
           sx={{
             display: 'flex',
             flexDirection: 'column',

@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           label={auth ? 'nowLogin' : 'nowLogout'}
         />
       </FormGroup>
-      { auth ? <MyHomePage /> : <FirstVisitPage />}
+      {auth ? <MyHomePage /> : <FirstVisitPage />}
     </Box>
   );
 };

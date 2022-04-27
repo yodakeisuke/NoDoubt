@@ -1,1 +1,3 @@
-export const aryMax = (a: number, b: number) => { return Math.max(a, b); };
+export const aryMax = (a: number, b: number) => {
+  return Math.max(a, b);
+};

@@ -1,40 +1,35 @@
 import React from 'react';
 
-import { Box, Paper } from '@mui/material';
+import LeakList from './LeakList/LeakList';
+import { Typography } from '@mui/material';
+import Divider from '@mui/material/Divider';
+import Box from '@mui/material/Box';
 
 import Layout from 'components/frames/Layout/Layout';
-import UpperLight from '../firstVisitPage/UpperLight/UpperLight';
+import Header from 'components/parts/Header/Header';
 import PaperGreen from 'components/frames/PaperGreen/PaperGreen';
+import ButtonPrimary from 'components/parts/ButtonPrimary/ButtonPrimary';
+import StripeTape from 'components/frames/StripeTape/StripeTape';
 
 /**
  * ログイン後のホーム画面。
  */
 export const MyHomePage: React.FC = () => {
   return (
-    <Layout title='Home - ButtonUp!' header={<UpperLight />}>
+    <Layout title="Home - ButtonUp!" header={<Header />}>
       <PaperGreen>
         <Box
-          component="section"
-          sx={{
-            padding: 2,
-            mb: 1,
-            display: 'grid',
-            gap: 2.5,
-          }}
+          className="reviewBoxContainer"
+          sx={{ display: 'grid', gap: 2.5, alignItems: 'center' }}
         >
-        {'ユーザ'}
+          <StripeTape sx={{ mx: 'auto', mt: 1 }}>
+            <Typography variant="subtitle2">usernameのクチコミ箱</Typography>
+          </StripeTape>
+          <Divider />
+          <ButtonPrimary width="150px">募集する！</ButtonPrimary>
+          <LeakList />
         </Box>
       </PaperGreen>
-      <Paper
-        component="aside"
-        elevation={10}
-        sx={{
-          m: 0.5,
-          width: '100%',
-        }}
-      >
-        {'募集ボタン'}
-      </Paper>
     </Layout>
   );
 };

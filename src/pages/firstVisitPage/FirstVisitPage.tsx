@@ -1,11 +1,10 @@
 import React from 'react';
 
-import { Box, Paper } from '@mui/material';
+import { Box, Paper, Typography } from '@mui/material';
 
 import Layout from 'components/frames/Layout/Layout';
-import ThemeLogoVariable from 'components/parts/ThemeLogoVariable/ThemeLogoVariable';
-import InitialDisplay from '../firstVisitPage/InitialDisplay/InitialDisplay';
-import UpperLight from '../firstVisitPage/UpperLight/UpperLight';
+import ThemeLogo from 'components/parts/ThemeLogo/ThemeLogo';
+import ExplainServiceCard from './ExplainServiceCard/ExplainServiceCard';
 import TopInfographic from 'components/parts/TopInfographic/TopInfographic';
 import PaperGreen from 'components/frames/PaperGreen/PaperGreen';
 
@@ -14,25 +13,36 @@ import PaperGreen from 'components/frames/PaperGreen/PaperGreen';
  */
 export const FirstVisitPage: React.FC = () => {
   return (
-    <Layout title='Home - ButtonUp!' header={<UpperLight />} >
+    <Layout title="あなたのクチコミ箱 - ButtonUp!">
       <PaperGreen>
+        <Typography
+          sx={{
+            textAlign: 'center',
+            margin: 2,
+            mb: 0,
+            fontSize: 'clamp(18px, 5vw, 30px)',
+          }}
+        >
+          個人のレピュテーションマネジメント
+        </Typography>
         <Box
           component="section"
           sx={{
             padding: 2,
             mb: 1,
             display: 'grid',
-            justifyContent :'center',
             gap: 2.5,
           }}
         >
-          <ThemeLogoVariable width="clamp(310px, 50vw, 370px)" />
-          <InitialDisplay />
+          <ThemeLogo
+            sx={{ width: 'clamp(310px, 50vw, 370px)', justifySelf: 'center' }}
+          />
+          <ExplainServiceCard />
         </Box>
       </PaperGreen>
       <Paper
         component="aside"
-        elevation={10}
+        elevation={1}
         sx={{
           m: 0.5,
           width: '100%',

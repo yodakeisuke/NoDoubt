@@ -2,9 +2,13 @@ import React from 'react';
 
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Footer from 'components/parts/Footer/Footer';
+import ThemeLogo from './ThemeLogo';
 
 it('renders credite', () => {
-  render(<Footer />);
-  expect(screen.getByText('Keisuke')).toBeInTheDocument();
+  render(<ThemeLogo />);
+
+  const img = screen.getByAltText('mainlogo');
+  expect(img).toHaveStyle(`
+    max-width: 100%
+`);
 });

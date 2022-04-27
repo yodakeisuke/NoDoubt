@@ -5,18 +5,18 @@ const lighttheme = createTheme({
   palette: {
     background: {
       default: ColorCode.OFF_WHITE,
-      paper: ColorCode.OFF_WHITE,
+      paper: ColorCode.PURE_WHITE,
     },
     primary: {
-      main: ColorCode.OFF_WHITE,
-      contrastText: ColorCode.RED,
+      main: ColorCode.RED,
+      contrastText: ColorCode.PURE_WHITE,
     },
     secondary: {
-      main: ColorCode.RED,
+      main: ColorCode.GREEN,
       contrastText: ColorCode.OFF_WHITE,
     },
     info: {
-      main: ColorCode.OFF_WHITE,
+      main: ColorCode.DEEP_DARK_BLUE,
       contrastText: ColorCode.DEEP_DARK_BLUE,
     },
     text: {

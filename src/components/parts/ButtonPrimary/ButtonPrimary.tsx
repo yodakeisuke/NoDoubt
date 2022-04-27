@@ -2,29 +2,32 @@ import React from 'react';
 
 import { Fab } from '@mui/material';
 
-import ColorCode from 'global/types/ColorCode';
+interface Props {
+  children: string;
+  width?: string;
+}
 
 /**
  * トップページからの登録/ログインボタン。
- * サインアップorサインイン画面に遷移
+ * todo: インタラクションを注入できるように？
  */
-export const SignUpButton: React.FC = () => {
+export const ButtonPrimary: React.FC<Props> = ({ children, width }) => {
   return (
     <Fab
+      className="buttonPrimary"
       variant="extended"
-      color="secondary"
+      color="primary"
       size="medium"
       sx={{
-        width: '85%',
-        color: 'white',
+        width: width,
         fontSize: '1rem',
         fontWeight: 'bold',
         mx: 'auto',
       }}
     >
-      登録／ログイン
+      {children}
     </Fab>
   );
 };
 
-export default SignUpButton;
+export default ButtonPrimary;

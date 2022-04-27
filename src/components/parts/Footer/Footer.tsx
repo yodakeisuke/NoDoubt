@@ -9,6 +9,7 @@ export const Footer: React.FC = () => {
 
   return (
     <Box
+      className="footer"
       component="footer"
       sx={{
         display: 'flex',
