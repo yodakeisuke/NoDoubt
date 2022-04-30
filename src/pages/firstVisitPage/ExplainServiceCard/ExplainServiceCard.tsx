@@ -1,6 +1,8 @@
 import { FC } from 'react';
+import Link from 'next/link';
 
 import { Paper, Typography } from '@mui/material';
+import MuiLink from '@mui/material/Link';
 
 import ButtonPrimary from 'components/parts/ButtonPrimary/ButtonPrimary';
 
@@ -27,7 +29,11 @@ export const ExplainServiceCard: FC = () => {
       <Typography sx={{ mb: 2, fontWeight: 'bold' }}>
         フレネミーの足の引っ張りに対策する。
       </Typography>
-      <ButtonPrimary width="85%">登録／ログイン</ButtonPrimary>
+      <Link href="/auth/Auth" as="auth" passHref>
+        <MuiLink underline="none" color="inherit" textAlign="center">
+          <ButtonPrimary width="85%">登録／ログイン</ButtonPrimary>
+        </MuiLink>
+      </Link>
     </Paper>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 
 import type { NextPage } from 'next';
 
@@ -8,7 +8,7 @@ import FirstVisitPage from 'pages/firstVisitPage/FirstVisitPage';
 import MyHomePage from 'pages/myHomePage/MyHomePage';
 
 const Home: NextPage = () => {
-  const [auth, setAuth] = React.useState(false);
+  const [auth, setAuth] = useState(false);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setAuth(event.target.checked);
   };
