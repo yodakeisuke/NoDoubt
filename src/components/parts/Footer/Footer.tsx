@@ -1,10 +1,10 @@
-import React from 'react';
+import { FC } from 'react';
 
 import Link from 'next/link';
 
 import { Box, Typography } from '@mui/material';
 
-export const Footer: React.FC = () => {
+export const Footer: FC = () => {
   const MyGitHub: string = 'https://github.com/yodakeisuke';
 
   return (

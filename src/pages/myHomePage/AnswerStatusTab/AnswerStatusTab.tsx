@@ -1,4 +1,5 @@
-import * as React from 'react';
+import { FC, useState, SyntheticEvent } from 'react';
+
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
@@ -7,10 +8,10 @@ import TabPanel from '@mui/lab/TabPanel';
 
 import { IsAnswered } from 'global/types/LeakType';
 
-export const AnswerStatusTab: React.FC = () => {
-  const [currentTab, setcurrentTab] = React.useState<IsAnswered>('Unanswered');
+export const AnswerStatusTab: FC = () => {
+  const [currentTab, setcurrentTab] = useState<IsAnswered>('Unanswered');
 
-  const handleChange = (event: React.SyntheticEvent, newValue: IsAnswered) => {
+  const handleChange = (event: SyntheticEvent, newValue: IsAnswered) => {
     setcurrentTab(newValue);
   };
 

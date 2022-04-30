@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -12,7 +12,7 @@ import IconButton from '@mui/material/IconButton';
 
 import TextLogo from '/public/textLogo.webp';
 
-export const Header: React.FC = () => {
+export const Header: FC = () => {
   return (
     <AppBar
       className="header"

@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
 import Head from 'next/head';
 
@@ -12,7 +12,7 @@ type Props = {
   children: ReactNode;
 };
 
-const Layout: React.FC<Props> = ({ title, header, children }) => {
+const Layout: FC<Props> = ({ title, header, children }) => {
   return (
     <Box className="layout">
       <Head>

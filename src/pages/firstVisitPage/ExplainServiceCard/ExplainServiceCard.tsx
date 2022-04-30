@@ -1,10 +1,10 @@
-import React from 'react';
+import { FC } from 'react';
 
 import { Paper, Typography } from '@mui/material';
 
 import ButtonPrimary from 'components/parts/ButtonPrimary/ButtonPrimary';
 
-export const ExplainServiceCard: React.FC = () => {
+export const ExplainServiceCard: FC = () => {
   return (
     <Paper
       className="explainServiceCard:"

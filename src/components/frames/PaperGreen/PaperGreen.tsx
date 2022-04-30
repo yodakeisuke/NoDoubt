@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
 import { Paper } from '@mui/material';
 
@@ -11,7 +11,7 @@ interface Props {
 /**
  * 背景グリーンの枠
  */
-export const PaperGreen: React.FC<Props> = ({ children }) => {
+export const PaperGreen: FC<Props> = ({ children }) => {
   return (
     <Paper
       className="PaparGreen"

@@ -1,5 +1,4 @@
-import React from 'react';
-
+import { FC } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -16,9 +15,9 @@ interface Props {
  * ルートへのリンク付きメインロゴ。MUIのBoxでラップしておりsxPropを受ける。
  * @param  sx
  */
-export const ThemeLogo: React.FC<Props> = ({ sx }) => {
+export const ThemeLogo: FC<Props> = ({ sx }) => {
   return (
-    <Box className="themeLogo" component="picture" sx={sx}>
+    <Box className="themeLogoContainer" component="picture" sx={sx}>
       <Link href="/" passHref>
         <Image src={MainLogo} layout="responsive" alt="mainlogo" />
       </Link>

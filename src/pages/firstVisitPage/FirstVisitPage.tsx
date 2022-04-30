@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 
 import { Box, Paper, Typography } from '@mui/material';
 
@@ -11,11 +11,12 @@ import PaperGreen from 'components/frames/PaperGreen/PaperGreen';
 /**
  * 初回訪問時の表示ページ。
  */
-export const FirstVisitPage: React.FC = () => {
+export const FirstVisitPage: FC = () => {
   return (
     <Layout title="あなたのクチコミ箱 - ButtonUp!">
       <PaperGreen>
         <Typography
+          fontWeight="bold"
           sx={{
             textAlign: 'center',
             margin: 2,
@@ -25,17 +26,13 @@ export const FirstVisitPage: React.FC = () => {
         >
           個人のレピュテーションマネジメント
         </Typography>
-        <Box
-          component="section"
-          sx={{
-            padding: 2,
-            mb: 1,
-            display: 'grid',
-            gap: 2.5,
-          }}
-        >
+        <Box component="section" padding={2} mb={1} display="grid" gap={2.5}>
           <ThemeLogo
-            sx={{ width: 'clamp(310px, 50vw, 370px)', justifySelf: 'center' }}
+            sx={{
+              width: 'clamp(250px, 50vw, 370px)',
+              justifySelf: 'center',
+              py: 1,
+            }}
           />
           <ExplainServiceCard />
         </Box>

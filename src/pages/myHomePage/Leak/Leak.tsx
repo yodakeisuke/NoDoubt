@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
  * 投稿の一覧
  * インタラクション：
  */
-export const Leak: React.FC = () => {
+export const Leak: FC = () => {
   return (
     <Card className="leak" sx={{ width: '90%', mx: 'auto' }}>
       <CardContent>
