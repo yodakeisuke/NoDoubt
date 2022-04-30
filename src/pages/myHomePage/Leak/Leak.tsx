@@ -18,7 +18,7 @@ export const Leak: FC = () => {
           タイトル仮
         </Typography>
         <Typography variant="body2">
-          本文仮
+          タレコミ内容〜〜〜〜〜〜
           <br />
           本文仮
         </Typography>
