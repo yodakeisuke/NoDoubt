@@ -1,8 +1,9 @@
 const ColorCode = {
   RED: '#FF5722',
   OFF_WHITE: '#EEEEEE',
-  DEEP_DARK_BLUE: '#2D4059',
-  GREEN: '#97BFB4',
+  PURE_WHITE: "white",
+  DEEP_DARK_BLUE: '#004466',
+  GREEN: '#C5E1DA',
 } as const;
 
 export type ColorCodeType = typeof ColorCode[keyof typeof ColorCode];

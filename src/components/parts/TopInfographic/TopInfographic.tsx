@@ -17,7 +17,7 @@ interface Props {
  */
 export const TopInfographic: React.FC<Props> = ({ width = '100%' }) => {
   return (
-    <Box component="picture" sx={{ width: width }}>
+    <Box className="TopInfographic" component="picture" sx={{ width: width }}>
       <Link href="/" passHref>
         <Image src={Graphic} layout="responsive" alt="graphic" />
       </Link>

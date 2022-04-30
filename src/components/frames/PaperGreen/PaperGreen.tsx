@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
 import { Paper } from '@mui/material';
 
@@ -11,17 +11,19 @@ interface Props {
 /**
  * 背景グリーンの枠
  */
-export const PaperGreen: React.FC<Props> = ({ children }) => {
+export const PaperGreen: FC<Props> = ({ children }) => {
   return (
     <Paper
+      className="PaparGreen"
       component="article"
-      elevation={10}
+      elevation={1}
       sx={{
-        my: 0.5,
-        px: 1,
-        py: 1.5,
+        p: 0.5,
         backgroundColor: ColorCode.GREEN,
         width: '100%',
+        mb: 2,
+        display: 'grid',
+        alignItems: 'center',
       }}
     >
       {children}
