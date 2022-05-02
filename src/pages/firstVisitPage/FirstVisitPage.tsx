@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Box, Paper, Typography } from '@mui/material';
+import { Box, Paper, Typography, Divider } from '@mui/material';
 
 import Layout from 'components/frames/Layout/Layout';
 import ThemeLogo from 'components/parts/ThemeLogo/ThemeLogo';
@@ -20,12 +20,12 @@ export const FirstVisitPage: FC = () => {
           sx={{
             textAlign: 'center',
             margin: 2,
-            mb: 0,
             fontSize: 'clamp(18px, 5vw, 30px)',
           }}
         >
           個人のレピュテーションマネジメント
         </Typography>
+        <Divider />
         <Box component="section" padding={2} mb={1} display="grid" gap={2.5}>
           <ThemeLogo
             sx={{
