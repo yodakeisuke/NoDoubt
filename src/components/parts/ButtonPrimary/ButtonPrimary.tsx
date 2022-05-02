@@ -4,7 +4,7 @@ import { Fab } from '@mui/material';
 
 interface Props {
   children: string;
-  width?: string;
+  width?: string | undefined;
 }
 
 /**

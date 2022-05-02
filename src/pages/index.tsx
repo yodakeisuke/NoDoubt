@@ -15,7 +15,6 @@ const Home: NextPage = () => {
 
   return (
     <Box>
-      {auth ? <MyHomePage /> : <FirstVisitPage />}
       {/*/開発時オンリー*/}
       <FormGroup>
         <FormControlLabel
@@ -29,6 +28,7 @@ const Home: NextPage = () => {
           label={auth ? 'nowLogin' : 'nowLogout'}
         />
       </FormGroup>
+      {auth ? <MyHomePage /> : <FirstVisitPage />}
     </Box>
   );
 };
