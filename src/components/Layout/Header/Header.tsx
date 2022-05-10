@@ -5,11 +5,12 @@ import Image from 'next/image';
 
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import ThemeLogo from 'components/parts/ThemeLogo/ThemeLogo';
-import LogoutIcon from '@mui/icons-material/Logout';
+
 import SettingsIcon from '@mui/icons-material/Settings';
 import IconButton from '@mui/material/IconButton';
 
+import ThemeLogo from 'components/shared/ThemeLogo/ThemeLogo';
+import LogoutButton from 'components/Layout/LogoutButton/LogoutButton';
 import TextLogo from '/public/textLogo.webp';
 
 export const Header: FC = () => {
@@ -35,9 +36,7 @@ export const Header: FC = () => {
         <IconButton sx={{ ml: 'auto', pb: 0.3 }}>
           <SettingsIcon color="info" />
         </IconButton>
-        <IconButton sx={{ pb: 0.3 }}>
-          <LogoutIcon color="info" />
-        </IconButton>
+        <LogoutButton />
       </Toolbar>
     </AppBar>
   );

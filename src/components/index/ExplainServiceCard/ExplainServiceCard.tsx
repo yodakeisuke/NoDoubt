@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Paper, Typography } from '@mui/material';
 import MuiLink from '@mui/material/Link';
 
-import ButtonPrimary from 'components/parts/ButtonPrimary/ButtonPrimary';
+import ButtonPrimary from 'components/shared/ButtonPrimary/ButtonPrimary';
 
 export const ExplainServiceCard: FC = () => {
   return (

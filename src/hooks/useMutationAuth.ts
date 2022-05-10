@@ -1,30 +1,33 @@
-import { useState } from 'react'
-import { supabase } from '../../utils/supabase'
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+
+import { supabase } from 'utils/supabase'
+
+import { AccountFormType } from 'global/types/AccountForm';
 
 export const useMutateAuth = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const reset = () => {
-    setEmail('')
-    setPassword('')
-  }
-  const loginMutation = async () => {
+  const { push } = useRouter();
+  const [errorMsg, setErrorMsg] = useState<string | undefined>()
+
+  const loginMutation = async ({email, password}: AccountFormType) => {
     const { error } = await supabase.auth.signIn({ email, password })
-    return error
+    if (error) setErrorMsg(error.message);
   }
 
-  const registerMutation = async () => {
+  const registerMutation = async ({email, password}: AccountFormType) => {
     const { error } = await supabase.auth.signUp({ email, password })
-    return error
+    if (error)  {
+      setErrorMsg(error.message);
+    }
+    else {
+    push('/requireEmailConfirmationPage');
+    }
   }
 
   return {
-    email,
-    setEmail,
-    password,
-    setPassword,
+    errorMsg,
+    setErrorMsg,
     loginMutation,
     registerMutation,
-    reset,
   }
 }

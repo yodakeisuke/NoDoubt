@@ -2,11 +2,11 @@ import { FC } from 'react';
 
 import { Box, Paper, Typography, Divider } from '@mui/material';
 
-import Layout from 'components/frames/Layout/Layout';
-import ThemeLogo from 'components/parts/ThemeLogo/ThemeLogo';
+import Layout from 'components/Layout/Layout';
+import ThemeLogo from 'components/shared/ThemeLogo/ThemeLogo';
 import ExplainServiceCard from './ExplainServiceCard/ExplainServiceCard';
-import TopInfographic from 'components/parts/TopInfographic/TopInfographic';
-import PaperGreen from 'components/frames/PaperGreen/PaperGreen';
+import TopInfographic from 'components/shared/TopInfographic/TopInfographic';
+import PaperGreen from 'components/shared/PaperGreen/PaperGreen';
 
 /**
  * 初回訪問時の表示ページ。

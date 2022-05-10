@@ -8,14 +8,21 @@ import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+import CloseIcon from '@mui/icons-material/Close';
+import IconButton from '@mui/material/IconButton';
 
-// todo 分割&formとしての再利用性
+// todo 分割formとsnackbar
 export const AccountForm: FC = () => {
-  const { loginMutation, registerMutation } = useMutateAuth();
+  const { errorMsg, setErrorMsg, loginMutation, registerMutation } =
+    useMutateAuth();
   const [forSignUp, setForSignUp] = useState(false);
   const { control, handleSubmit } = useForm<AccountFormType>();
-  const onSubmit: SubmitHandler<AccountFormType> = (data) => {
-    forSignUp ? registerMutation : loginMutation;
+  const onSubmit: SubmitHandler<AccountFormType> = ({ email, password }) => {
+    forSignUp
+      ? registerMutation({ email, password })
+      : loginMutation({ email, password });
   };
 
   const validationRules = {
@@ -71,21 +78,6 @@ export const AccountForm: FC = () => {
           />
         )}
       />
-      <Controller
-        name="password_conform"
-        control={control}
-        rules={validationRules.password}
-        defaultValue=""
-        render={({ field, fieldState }) => (
-          <TextField
-            {...field}
-            type="text"
-            label="パスワード（確認用）"
-            error={fieldState.error ? true : false}
-            helperText={fieldState.error?.message}
-          />
-        )}
-      />
 
       <Button
         type="button"
@@ -99,6 +91,30 @@ export const AccountForm: FC = () => {
       <Button type="submit" variant="contained">
         {forSignUp ? '新規登録' : 'ログイン'}
       </Button>
+      <Snackbar
+        open={errorMsg ? true : false}
+        autoHideDuration={6000}
+        anchorOrigin={{ horizontal: 'center', vertical: 'top' }}
+      >
+        <Alert
+          severity="error"
+          sx={{ width: '100%' }}
+          action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setErrorMsg('');
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+          }
+        >
+          {errorMsg}
+        </Alert>
+      </Snackbar>
     </Stack>
   );
 };

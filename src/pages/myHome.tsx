@@ -1,14 +1,14 @@
 import { FC } from 'react';
 
-import LeakList from './LeakList/LeakList';
+import LeakList from '../components/myHome/LeakList/LeakList';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 
-import Layout from 'components/frames/Layout/Layout';
-import Header from 'components/parts/Header/Header';
-import PaperGreen from 'components/frames/PaperGreen/PaperGreen';
-import ButtonPrimary from 'components/parts/ButtonPrimary/ButtonPrimary';
-import UserInfo from './UserInfo/UserInfo';
+import Layout from 'components/Layout/Layout';
+import Header from 'components/Layout/Header/Header';
+import PaperGreen from 'components/shared/PaperGreen/PaperGreen';
+import ButtonPrimary from 'components/shared/ButtonPrimary/ButtonPrimary';
+import UserInfo from '../components/myHome/UserInfo/UserInfo';
 
 /**
  * ログイン後のホーム画面。
